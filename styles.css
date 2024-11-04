@@ -1,0 +1,17 @@
+@import url("stylesheets/modernCSSReset.css");
+
+img{
+    height:50px;
+    width:50px;
+}
+
+ul {
+    list-style-type:none;
+}
+
+.sideBar{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height:100vh;
+}
