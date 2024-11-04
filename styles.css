@@ -1,17 +1,97 @@
 @import url("stylesheets/modernCSSReset.css");
+@import url("fonts.css");
 
-img{
-    height:50px;
-    width:50px;
+:root{
+    font-family:"Roboto";
+    font-size:1rem;
+    --sidebar-font-size:1.8rem;
 }
 
-ul {
-    list-style-type:none;
+
+.pageLayout{
+    display:grid;
+    grid-template-columns:repeat(1fr, 6);
+    grid-template-rows:repeat(1fr,6);
 }
 
+.profileInteraction{
+    grid-column-start:1;
+    grid-column-end:7;
+    grid-row-start:1;
+    grid-row-end:7;
+    background-color:rgb(0, 255, 0,0.3);
+    /* overflow:scroll; */
+}
+.content{
+    grid-column-start:1;
+    grid-column-end:7;
+    grid-row-start:1;
+    grid-row-end:7;
+    background-color:rgb(0, 0, 255,0.3);
+}
 .sideBar{
+    grid-row-start:0;
+    grid-row-end:1;
+    grid-column-start:0;
+    grid-column-end:1;
     display:flex;
     flex-direction:column;
-    justify-content:space-around;
     height:100vh;
+    background-color:rgb(25 146 212);    
+    color:white;
+    font-weight:800;
+}
+
+.sideBar > * {
+    margin-bottom:4rem;
+}
+
+img{
+    height:var(--sidebar-font-size);
+    width:50px;
+    filter:invert();
+}
+
+ul > div > img {
+    display:inline-flex;
+}
+ul > div > li {
+    display:inline-flex;
+    font-size:var(--sidebar-font-size);
+    font-weight:500;
+}
+
+.userTasks{
+    margin-top:8vh;
+}
+.userTasks > *{
+    height:3rem;
+}
+
+.topHeading {
+    margin-top:8%;
+    margin-left:5%;
+    display:inherit;
+    justify-items:center;
+    align-items: center;
+}
+.topHeading > * {
+    display:inline-flex;
+}
+
+ul > * {
+    list-style-type: none;
+}
+
+.userTasks > div > * {
+    flex-wrap:nowrap;
+}
+
+.userDashboardLogo{
+    height:2.8rem;
+    margin-right:1.5vw;
+}
+
+.supportTasks{
+    margin-top:8vh;
 }
