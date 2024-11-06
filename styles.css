@@ -170,7 +170,8 @@ ul > * {
                 .singleAnnouncContainer{
                     padding:0.2rem;
                     span {
-                        font-size:1rem;
+                        font-size:0.7rem;
+                        font-weight:450;
                         text-overflow:ellipsis;
                     }
                     h3{
