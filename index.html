@@ -3,72 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-<div class="pageLayout">
-    
-        <div class="sideBar">
-            <div class="topHeading">
-                <img src="logo/view-dashboard.svg" alt="Website Dashboard logo" class="userDashboardLogo">
-                <h1 class="dashboardLabel">Dashhboard</h1>
-            </div>
-            <ul class="userTasks">
-                <div class="userTaskObject01">
-                    <img src="logo/home.svg" alt="User Home Logo" class="userLogo01">
-                    <li class="userItem01">Home</li>
-                </div>
-                <div class="userTaskObject02">
-                    <img src="logo/card-account-details.svg" alt="User Profile Logo" class="userLogo02">
-                    <li class="userItem02">Profile</li>
-                </div>
-                <div class="userTaskObject03">
-                    <img src="logo/message.svg" alt="User Message Logo" class="userLogo03">
-                    <li class="userItem03">Messages</li>
-                </div>
-                <div class="userTaskObject04">
-                    <img src="logo/clock-time-three-outline.svg" alt="User History Logo" class="userLogo04">
-                    <li class="userItem04">History</li>
-                </div>
-                <div class="userTaskObject05">
-                    <img src="logo/note-multiple.svg" alt="User Tasks Logo" class="userLogo05">
-                    <li class="userItem05">Tasks</li>
-                </div>
-                <div class="userTaskObject06">
-                    <img src="logo/account-group.svg" alt="User Communities Logo" class="userLogo06">
-                    <li class="userItem06">Communities</li>
-                </div>
-            </ul>
-            <ul class="supportTasks">
-                <div class="userSettingsObject01">
-                    <img src="logo/cog.svg" alt="User Settings Logo" class="userSettingsObject01">
-                    <li class="supportItem01">Settings</li>
-                </div>
-                <div class="userSettingsObject02">
-                    <img src="logo/help-box.svg" alt="User Support Logo" class="userSettingsObject02">
-                    <li class="supportItem02">Support</li>
-                </div>
-                <div class="userSettingsObject03">
-                    <img src="logo/shield-check.svg" alt="User Privacy Logo" class="userSettingsObject03">
-                    <li class="supportItem03">Privacy</li>
-                </div>
-    
-            </ul>
-        </div>
-
-        <div class="profileInteraction">
-            <p>Profile Interaction Contents</p>
-            <div class="searchAndProfile"></div>
-            <div class="profileInteractionAndPost"></div>
-        </div>
         
-        <div class="content">
-            <div class="projects"></div>
-            <p>Content Div Contents</p>
-            <div class="announceTrending"></div>
-        </div>
-</div>
+    <div class="pageLayout">
+        
+            <div class="sideBar">
+                <div class="topHeading">
+                    <img src="logo/view-dashboard.svg" alt="Website Dashboard logo" class="userDashboardLogo">
+                    <h1 class="dashboardLabel">Dashhboard</h1>
+                </div>
+                <ul class="userTasks">
+                    <div class="userTaskObject">
+                        <img src="logo/home.svg" alt="User Home Logo" class="userLogo">
+                        <li class="userItem">Home</li>
+                    </div>
+                    <div class="userTaskObject">
+                        <img src="logo/card-account-details.svg" alt="User Profile Logo" class="userLogo">
+                        <li class="userItem">Profile</li>
+                    </div>
+                    <div class="userTaskObject">
+                        <img src="logo/message.svg" alt="User Message Logo" class="userLogo">
+                        <li class="userItem">Messages</li>
+                    </div>
+                    <div class="userTaskObject">
+                        <img src="logo/clock-time-three-outline.svg" alt="User History Logo" class="userLogo">
+                        <li class="userItem">History</li>
+                    </div>
+                    <div class="userTaskObject">
+                        <img src="logo/note-multiple.svg" alt="User Tasks Logo" class="userLogo">
+                        <li class="userItem">Tasks</li>
+                    </div>
+                    <div class="userTaskObject">
+                        <img src="logo/account-group.svg" alt="User Communities Logo" class="userLogo">
+                        <li class="userItem">Communities</li>
+                    </div>
+                </ul>
+                <ul class="supportTasks">
+                    <div class="userSettingsObject">
+                        <img src="logo/cog.svg" alt="User Settings Logo" class="userSettingsObject">
+                        <li class="supportItem">Settings</li>
+                    </div>
+                    <div class="userSettingsObject">
+                        <img src="logo/help-box.svg" alt="User Support Logo" class="userSettingsObject">
+                        <li class="supportItem">Support</li>
+                    </div>
+                    <div class="userSettingsObject">
+                        <img src="logo/shield-check.svg" alt="User Privacy Logo" class="userSettingsObject">
+                        <li class="supportItem">Privacy</li>
+                    </div>
+        
+                </ul>
+            </div>
+
+            <div class="profileInteraction">
+                <div class="searchAndProfile">
+                    <div class="projects">
+                        <h2 class="projectTitle">Your Projects</h2>
+                        <div class="cardContainer">
+                            <div class="card">
+                                <h3 class="cardheading">Super Cool Project</h3>
+                                <span class="cardtext">
+                                    Sed tempus ut lacus ut scelerisque. Suspendisse
+                                    sollicitudin nibh erat, id facilis felis accumsan nec.
+                                </span>
+                                <div class="cardIcons">
+                                    <img src="logo/star-plus-outline.svg" alt="Favorite Icon">
+                                    <img src="logo/eye-plus-outline.svg" alt="Watch Icon" height="30px">
+                                    <img src="logo/share-variant-outline.svg" alt="Share Icon">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3 class="cardheading">Less Cool Project</h3>
+                                <span class="cardtext">
+                                    Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapien et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius pellentesque lacus.
+                                </span>
+                                <div class="cardIcons">
+                                    <img src="logo/star-plus-outline.svg" alt="Favorite Icon">
+                                    <img src="logo/eye-plus-outline.svg" alt="Watch Icon" height="30px">
+                                    <img src="logo/share-variant-outline.svg" alt="Share Icon">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3 class="cardheading">Impossible App</h3>
+                                <span class="cardtext">
+                                    In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.s
+                                </span>
+                                <div class="cardIcons">
+                                    <img src="logo/star-plus-outline.svg" alt="Favorite Icon">
+                                    <img src="logo/eye-plus-outline.svg" alt="Watch Icon" height="30px">
+                                    <img src="logo/share-variant-outline.svg" alt="Share Icon">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3 class="cardheading">Easy Peasy App</h3>
+                                <span class="cardtext">
+                                    Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.
+                                </span>
+                                <div class="cardIcons">
+                                    <img src="logo/star-plus-outline.svg" alt="Favorite Icon">
+                                    <img src="logo/eye-plus-outline.svg" alt="Watch Icon" height="30px">
+                                    <img src="logo/share-variant-outline.svg" alt="Share Icon">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3 class="cardheading">Ad Blocker</h3>
+                                <span class="cardtext">
+                                    Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel, pharetra hendrerit felis. Aliquam sed malesuada eros.
+                                </span>
+                                <div class="cardIcons">
+                                    <img src="logo/star-plus-outline.svg" alt="Favorite Icon">
+                                    <img src="logo/eye-plus-outline.svg" alt="Watch Icon" height="30px">
+                                    <img src="logo/share-variant-outline.svg" alt="Share Icon">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3 class="cardheading">Money Maker</h3>
+                                <span class="cardtext">
+                                    Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex. Pellentesque mollis nec sem vel aliquam.
+                                </span>
+                                <div class="cardIcons">
+                                    <img src="logo/star-plus-outline.svg" alt="Favorite Icon">
+                                    <img src="logo/eye-plus-outline.svg" alt="Watch Icon" height="30px">
+                                    <img src="logo/share-variant-outline.svg" alt="Share Icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profileInteractionAndPost">
+                    <div class="announcements">
+                        <h2 class="announcementsHeading">Announcements</h2>
+                        <div class="announcementsSubtextBlocks">
+                            <div class="singleAnnouncContainer">
+                                <h3 class="announcementsSubtextHeading">Site Maintenance</h3>
+                                <span class="announcementSubtextText">Vestibulum condimentum tellus lacus, in accumsan elit maximus ac. Donec hendrerit sodales congue...</span>
+                                <div class="greySeparator"></div>
+                            </div>                            
+                            <div class="singleAnnouncContainer">
+                                <h3 class="announcementsSubtextHeading">Community Share Day</h3>
+                                <span class="announcementSubtextText">Nam vel lectus tincidunt, rutrum nulla eu, ornare libero. Aliquam dictum accumsan porttitor...</span>
+                                <div class="greySeparator"></div>
+                            </div>
+                            <!-- Grey line here -->
+                            <div class="singleAnnouncContainer">
+                                <h3 class="announcementsSubtextHeading">Updated Privacy Policy</h3>
+                                <span class="announcementSubtextText">Phasellus efficitur nisi eget elit consectetur, eget condimentum ante auctor. Cras fringilla sagittis sem in mattis...</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="trending">
+                        <div class="trendingContainer">
+                            <h2 class="announcementsHeading">Trending</h2>
+                            <div class="trendingBlock">
+                                <div class="singleUserNameAndMessage">
+                                    <img src="logo/poultry.png" alt="User Icon" class="trendingSubLogo">
+                                    <div class="personNameAndMessage">
+                                        <p class="trendingSubtext">@tegan</p>
+                                        <p class="trendingSubTextDesc">World Peace Builder</p>
+                                    </div>
+                                </div>
+                                <div class="singleUserNameAndMessage">
+                                    <img src="logo/vegetables.png" alt="User Icon" class="trendingSubLogo">
+                                    <div class="personNameAndMessage">
+                                        <p class="trendingSubtext">@morgan</p>
+                                        <p class="trendingSubTextDesc">Super Cool Project</p>
+                                    </div>
+                                </div>
+                                <div class="singleUserNameAndMessage">
+                                    <img src="logo/customer.png" alt="User Icon" class="trendingSubLogo">
+                                    <div class="personNameAndMessage">
+                                        <p class="trendingSubtext">@kendall</p>
+                                        <p class="trendingSubTextDesc">Life Changing App</p>
+                                    </div>
+                                </div>
+                                <div class="singleUserNameAndMessage">
+                                    <img src="logo/cashier.png" alt="User Icon" class="trendingSubLogo">
+                                    <div class="personNameAndMessage">
+                                        <p class="trendingSubtext">@alex</p>
+                                        <p class="trendingSubTextDesc">No Traffic Maker</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="content">
+                
+                <div class="announceTrending">
+                    <img src="logo/magnify.svg" alt="" class="searchIcon">
+                    <input type="text" id="searchInput">
+                </div>
+                <div class="helloUser">
+                    <img src="logo/dairy.png" alt="User Icon" class="trendingSubLogo">
+                    <div class="personNameAndMessage">
+                        <p class="trendingSubtext">Hi there,</p>
+                        <p class="trendingSubTextDesc">Morgan Oakley (@morgan)</p>
+                    </div>
+                </div>
+                <div class="userCreationButtons">
+                    <button class="userButton">New</button>
+                    <button class="userButton">Upload</button>
+                    <button class="userButton">Save</button>
+                </div>
+                <div class="userAccountControls">
+                    <img src="logo/bell-ring-outline.svg" alt="Alarm Icon" id="notificationBell">
+                    <img src="logo/dairy.png" alt="User Icon" class="trendingSubLogo">
+                    <p>Morgan Oakley</p>
+                </div>
+            </div>
+    </div>
 </body>
 </html>
+
+<!-- User icons on the right are designed by Freepik on flaticon.com -->

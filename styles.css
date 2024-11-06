@@ -4,9 +4,30 @@
 :root{
     font-family:"Roboto";
     font-size:1rem;
-    --sidebar-font-size:1.8rem;
+    --sidebar-font-size:1.2rem;
+    --subheadings-spacing:1rem;
 }
 
+img{
+    height:var(--sidebar-font-size);
+    width:50px;
+    filter:invert();
+}
+ul > div > img {
+    display:inline-flex;
+}
+ul > div > li {
+    display:inline-flex;
+    font-size:var(--sidebar-font-size);
+    font-weight:500;
+}
+ul > * {
+    list-style-type: none;
+}
+.cardtext, .trendingSubTextDesc, .announcementSubtextText {
+    color:rgb(87, 87, 87);
+    font-size:1rem;
+}
 
 .pageLayout{
     display:grid;
@@ -21,79 +42,283 @@
     "s p p p p p p"
     "s p p p p p p"
     "s p p p p p p"
-    "s p p p p p p"
+    "s p p p p p p";
+    .sideBar{
+        grid-area:s;
+        display:flex;
+        flex-direction:column;
+        background-color:rgb(25 146 212);    
+        color:white;
+        font-weight:800;
+        padding-right:2vw;
+        > * {
+            margin-bottom:4rem;
+            position:sticky;
+            align-self:start;
+        }
+        .topHeading {
+            margin-top:8%;
+            margin-left:2vh;
+            display:inherit;
+            justify-items:start;
+            align-items: center;
+            * {
+                display:inline-flex;
+                font-size:var(--sidebar-font-size);
+            }
+            h1{
+                font-size:calc(var(--sidebar-font-size)*1.25);
+            }
+            .userDashboardLogo{
+                height:calc(var(--sidebar-font-size)*2);
+                margin-right:1.5vw;
+            }
+
+        }
+        .userTasks{
+            margin-top:3vh;
+            > * {
+                height:3rem;
+            }
+            div > * {
+                flex-wrap:nowrap;
+            }
+        }
+        .supportTasks{
+            margin-top:4vh;
+        }
+    }
+    
+    .profileInteraction{
+        grid-area:p;
+        display:grid;
+        grid-template-columns:repeat(8,1fr);
+        grid-template-areas:
+        "proj proj proj proj proj proj announc announc";
+        background-color:#e2e8f0;
+        /* overflow:scroll; */
+        gap:1.5rem;
+        padding:2vh;
+        .searchAndProfile{
+            color:black;
+            grid-area:proj;
+            .projects{
+                display:flex;
+                flex-direction:column;
+                h2 {
+                    grid-area:announceHeading;
+                    padding-bottom:var(--subheadings-spacing);
+                }
+                .cardContainer{
+                    display:grid;
+                    grid-template-columns: repeat(auto-fit,minmax(400px, 1fr));
+                    gap:2.5vw;
+                    .card{
+                        display:grid;
+                        background-color: white;
+                        border-radius:16px;
+                        padding:2rem;
+                        box-shadow: 0px 0px 4px 4px rgba(110, 110, 110, 0.3);
+                        padding-bottom:1rem;
+                        border-left:solid 1rem #f0b429;
+                        .cardheading{
+                            font-size:1.1rem;
+                            padding-bottom:0.25rem;
+                        }
+                        .cardIcons{
+                            display:flex;
+                            position:static;
+                            margin-top:auto;
+                            padding-top:auto;
+                            margin-left:auto;
+                            img{
+                                height:var(--sidebar-font-size);
+                                width:3rem;
+                                filter:none;
+                                display:inline-block;
+                            }
+                        }
+                        
+                    }
+                }
+                
+            }
+        }
+        .profileInteractionAndPost{
+            grid-area: announc;
+            display:flex;
+            flex-direction:column;
+            h2{
+                padding-bottom:var(--subheadings-spacing);
+            }
+    
+            .announcementsSubtextBlocks{
+                box-shadow: 0px 0px 4px 4px rgba(110, 110, 110, 0.3);
+                background:white;
+                border-radius:8px;
+                padding:1.3rem;
+                display:grid;
+                grid-template-rows:repeat(2,1fr);
+                padding-bottom:1.5rem;
+                .greySeparator{
+                    background-color:rgb(114, 113, 113,0.1);
+                    height:0.1rem;
+                    border-radius:30%;
+                    margin:2px;
+
+                }
+                .singleAnnouncContainer{
+                    padding:0.2rem;
+                    span {
+                        font-size:1rem;
+                        text-overflow:ellipsis;
+                    }
+                    h3{
+                        font-size:1rem;
+                    }
+                }
+            }
+        }
+    
+    }
+
+    .content{
+        grid-area:c;
+        background-color:white;
+        box-shadow: 0px 0px 4px 4px rgba(110, 110, 110, 0.3);
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows:repeat(2,1fr);
+        grid-template-areas:
+        "trend trend userControl"
+        "helloUser helloUser userCreate";
+        gap:1rem;
+        /* padding-bottom:1rem; */
+        padding-left:2rem;
+        .announceTrending{
+            grid-area:trend;
+            display:flex;
+            flex-direction:row;
+            .searchIcon{
+                flex-grow:1;
+                align-self:center;
+                filter:none;
+                height:2rem;
+            }
+            #searchInput{
+                background-color: #e2e8f0;
+                border:none;
+                border-radius:20px;
+                flex-grow:23;
+                height:2rem;
+                align-self:center;
+            }
+        }
+        .helloUser{
+            grid-area:helloUser;
+            display:flex;
+                .trendingSubLogo{
+                    overflow:hidden;
+                    height:3rem;
+                    border-radius:100%;
+                    margin:4px;
+                    filter:none;
+                }
+                .personNameAndMessage{
+                    margin-left:1vw;
+                    color:black;
+                    font-weight:700;
+                    .trendingSubTextDesc{
+                        font-size:1.5rem;
+                        color:black;
+                        font-weight:700;
+                    }
+                }
+            
+        }
+        .userCreationButtons{
+            grid-area:userCreate;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-left:2vw;
+            padding-right:2vw;
+            button{
+                --button-dimension:0.3rem;
+                border:none;
+                border-radius:20px;
+                padding-top:calc(var(--button-dimension));
+                padding-bottom:calc(var(--button-dimension));
+                padding-left:calc(var(--button-dimension)*6);
+                padding-right:calc(var(--button-dimension)*6);
+                font-weight:500;
+                color:white;
+                background-color: rgb(25 146 212);
+            }
+        }
+        .userAccountControls{
+            padding-top:1vh;
+            grid-area:userControl;
+            display:flex;
+            padding-left:3rem;
+            img{
+                overflow:hidden;
+                height:3rem;
+                border-radius:100%;
+                margin:4px;
+                filter:none;
+            }
+            #notificationBell{
+                height:2rem;
+                align-self:center;
+            }
+            p{
+                align-self:center;
+                padding-left:2rem;
+                font-weight:700;
+                font-size:1.25rem;
+            }
+
+        }
+    }
+
 
 }
 
-.profileInteraction{
-    grid-area:p;
-    background-color:rgb(0, 255, 0,0.3);
-    overflow:scroll;
-}
-.content{
-    grid-area:c;
-    background-color:rgb(0, 0, 255,0.3);
-    padding-bottom:6vh;
-}
-.sideBar{
-    grid-area:s;
-    display:flex;
-    flex-direction:column;
-    background-color:rgb(25 146 212);    
-    color:white;
-    font-weight:800;
+
+
+.trending{
+    padding-top:1vh;
+    .trendingContainer{
+        display:flex;
+        flex-direction:column;
+        .trendingBlock{
+            display:inline-flex;
+            flex-direction:column;
+            background-color:white;
+            border-radius:10px;
+            padding:1rem;
+            box-shadow: 0px 0px 4px 4px rgba(110, 110, 110, 0.3);
+
+            .singleUserNameAndMessage{
+                display:flex;
+                .trendingSubLogo{
+                    overflow:hidden;
+                    height:3rem;
+                    border-radius:100%;
+                    margin:4px;
+                    filter:none;
+                }
+                .personNameAndMessage{
+                    margin-left:1vw;
+                    .trendingSubTextDesc{
+                        font-size:0.9rem;
+                    }
+                }
+
+            }
+        }
+        
+    }
 }
 
-.sideBar > * {
-    margin-bottom:4rem;
-}
-
-img{
-    height:var(--sidebar-font-size);
-    width:50px;
-    filter:invert();
-}
-
-ul > div > img {
-    display:inline-flex;
-}
-ul > div > li {
-    display:inline-flex;
-    font-size:var(--sidebar-font-size);
-    font-weight:500;
-}
-
-.userTasks{
-    margin-top:8vh;
-}
-.userTasks > *{
-    height:3rem;
-}
-
-.topHeading {
-    margin-top:8%;
-    margin-left:5%;
-    display:inherit;
-    justify-items:center;
-    align-items: center;
-}
-.topHeading > * {
-    display:inline-flex;
-}
-
-ul > * {
-    list-style-type: none;
-}
-
-.userTasks > div > * {
-    flex-wrap:nowrap;
-}
-
-.userDashboardLogo{
-    height:2.8rem;
-    margin-right:1.5vw;
-}
-
-.supportTasks{
-    margin-top:8vh;
-}
